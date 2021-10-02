@@ -35,13 +35,12 @@ export class SearchComponent implements OnInit {
 
     console.log("页面刷新会触发这个生命周期函数");
     var searchlist=this.storage.get("searchlist");
-    if(searchlist){
+    if(searchlist.length>0){
       this.historyList=searchlist;
     }
   }
 
   doSearch(){
-    debugger;
     if(this.historyList.indexOf(this.keyword)==-1){
       this.historyList.push(this.keyword);
       this.storage.set("searchlist",this.historyList);

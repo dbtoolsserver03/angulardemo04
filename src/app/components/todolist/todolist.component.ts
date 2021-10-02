@@ -18,7 +18,7 @@ export class TodolistComponent implements OnInit {
   }
   ngOnInit(): void {
     var todolist=this.storage.get("todolist");
-    if(todolist){
+    if(todolist.length>0){
       this.todolist=todolist;
     }
   }

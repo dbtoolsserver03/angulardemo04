@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './components/search/search.component';
 import { TodolistComponent } from './components/todolist/todolist.component';
+
+// 引入并且配置服务
+import { StorageService } from './services/storage.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +22,9 @@ import { TodolistComponent } from './components/todolist/todolist.component';
   imports: [
     BrowserModule,FormsModule
   ],
-  providers: [],
+
+  // 配置服务
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
